@@ -1,0 +1,1 @@
+from mymusic import MyMusicCatalogimport pytestdef test_mymusiccatalog():    mymc = MyMusicCatalog(mkDirs=False)    assert isinstance(mymc, MyMusicCatalog), "Sanity check for MyMusicCatalog"            @pytest.mark.slowdef test_mymusiccatalog_find():    mymc = MyMusicCatalog(mkDirs=False)    mymc.findArtistDirs(test=True)    
