@@ -1,0 +1,1 @@
+from mymusic import MyMusicParamsdef test_params():    params = MyMusicParams(verbose=True)    assert isinstance(params, MyMusicParams), "Sanity check for MyMusicParams"    
