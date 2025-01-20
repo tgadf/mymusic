@@ -1,16 +1,16 @@
-[tool.poetry]
+[project]
 name = "mymusic"
 version = "0.1.0"
 description = ""
-authors = ["tgadf <tgadfort@gmail.com>"]
+authors = [
+    {name = "tgadf",email = "tgadfort@gmail.com"}
+]
 readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+]
 
-[tool.poetry.dependencies]
-python = "^3.12"
-
-[tool.poe.tasks]
-known.script = "mymusic.knownmatched:knownmatched"
 
 [build-system]
-requires = ["poetry-core"]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
