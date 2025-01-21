@@ -12,10 +12,12 @@ class PrimeDir:
         retvals = sorted(retvals)
         self.primeDirectories = retvals
 
-    def getPrimeDirs(self):
+    def get_prime_dirs(self) -> 'list':
         return self.primeDirectories
 
-    def getPrimeDir(self, artistName):
+    def get_prime_dir(self, artistName: str) -> 'str':
+        assert isinstance(artistName, str), f"get_prime_dir({artistName}) is not valid"
+        
         try:
             start = artistName[0]
         except Exception as error:
@@ -35,5 +37,4 @@ class PrimeDir:
             
             
 def getPrimeDir(artistName):
-    pd = PrimeDir()
-    return pd.getPrimeDir(artistName)
+    return PrimeDir().get_prime_dir(artistName)
